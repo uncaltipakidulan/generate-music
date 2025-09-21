@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hideAllMessages();
         loadingDiv.classList.remove('hidden');
         generateBtn.disabled = true; // Nonaktifkan tombol saat memproses
-        generateBtn.textContent = 'Membuat Musik...'; // Beri umpan balik pada tombol
+        generateBtn.textContent = 'Membuat Instrumental'; // Beri umpan balik pada tombol
 
         try {
             // 2. Kirim permintaan POST ke backend
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 3. Periksa apakah respons tidak OK (misalnya status 4xx atau 5xx)
             if (!response.ok) {
-                let errorDetails = 'Terjadi kesalahan saat membuat musik.';
+                let errorDetails = 'Terjadi kesalahan saat membuat Instrumental.';
                 // Coba parse pesan error yang lebih detail dari backend jika ada
                 try {
                     const errorData = await response.json();
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 downloadLink.download = `generated_instrumental.${data.audio_mime_type.split('/')[1] || 'wav'}`; 
                 
                 // Tampilkan pesan sukses dan kontrol audio
-                resultDiv.innerHTML = 'Musik berhasil dibuat! Putar atau unduh di bawah.';
+                resultDiv.innerHTML = 'Instrumental berhasil dibuat! Putar atau Download di bawah.';
                 resultDiv.classList.remove('hidden');
                 downloadLink.classList.remove('hidden');
 
@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 6. Sembunyikan loading dan aktifkan kembali tombol generate
             loadingDiv.classList.add('hidden');
             generateBtn.disabled = false; // Aktifkan kembali tombol
-            generateBtn.textContent = 'Hasilkan Musik'; // Kembalikan teks tombol
+            generateBtn.textContent = 'Instrumental sedang diproses'; // Kembalikan teks tombol
         }
     });
 });
