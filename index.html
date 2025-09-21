@@ -3,33 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text to Instrumental Music Generator - Sapiens AI</title>
+    <title>Text to Instrumental Generator</title>
     
     <!-- Tautan ke file CSS Anda -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Text to Instrumental Music Generator</h1>
-        <p>Masukkan teks Anda di bawah untuk mengubahnya menjadi musik instrumental. <br>Dibuat oleh Sapiens AI</p>
+        <h1>Text to Instrumental Generator</h1>
+        <p>Masukkan teks Anda di bawah untuk mengubahnya menjadi musik instrumental.</p>
 
         <!-- Area input untuk lirik/teks -->
         <textarea id="lyricsInput" placeholder="Masukkan lirik atau teks Anda di sini..."></textarea>
         
         <!-- Tombol untuk memicu pembuatan musik -->
-        <button id="generateBtn">Buat Musik!</button>
+        <button id="generateBtn">Buat Instrumental!</button>
 
         <!-- Area loading yang akan ditampilkan saat memproses -->
         <div id="loading" class="hidden">
             <div class="spinner"></div>
-            <p>Membuat musik... Mohon tunggu.</p>
+            <p>Membuat instrumental... Mohon tunggu!</p>
         </div>
 
         <!-- Area hasil yang akan ditampilkan setelah musik dibuat -->
         <div id="result" class="hidden">
-            <h2>Hasil Musik Anda:</h2>
+            <h2>Hasil Instrumental Anda:</h2>
             <audio id="audioPlayer" controls></audio>
-            <p>Jika musik tidak diputar secara otomatis, klik tombol putar di atas.</p>
+            <p>Jika tidak diputar secara otomatis, klik tombol putar di atas.</p>
             <a id="downloadLink" href="#" download="generated_instrumental.wav" class="hidden">Unduh Musik</a>
         </div>
 
@@ -38,7 +38,7 @@
             <h2>Terjadi Kesalahan!</h2>
             <p id="errorMessage"></p>
             <p>Silakan coba lagi atau periksa koneksi internet Anda.</p>
-            <p>Catatan: Backend sedang berjalan di komputer lokal saya menggunakan ngrok. Pastikan ngrok dan aplikasi Python saya aktif.</p>
+            <p>Catatan: Error!</p>
         </div>
     </div>
 
